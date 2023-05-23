@@ -102,8 +102,8 @@ export const jobs = [
   {
     title: 'Masiv - Route mobile',
     date: '   <!-- Jan 2021 to Feb 2022 -->',
-    description: `Worked on a platform that offers masiv communication services(sms, email, voice), with different services as 
-    masiv files uploader, communications automation, etc. Initially using a monolith arquitecture but then migrated to a microfronts arquitecture,
+    description: `Worked on a platform that offers massive communication services(sms, email, voice), with different services as 
+    massive files uploader, communications automation, etc. Initially using a monolith arquitecture but then migrated to a microfronts arquitecture,
     in which I had the opportunity to start working with AWS
     S3 buckets and cloudfronts configurations. Used Vue js, Vuex, HTML, CSS with Sass.`,
     tasks: [

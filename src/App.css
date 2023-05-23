@@ -16,9 +16,6 @@
   align-items: center;
   font-size: 14px;
 }
-.App header img {
-  width: 20px;
-}
 footer {
   height: calc(25px - 1px);
   background-color: black;
@@ -43,4 +40,17 @@ footer a {
 .comment {
   color: darkolivegreen;
   font-weight: 600;
+}
+.bold {
+  font-weight: 800;
+}
+a {
+  text-decoration: underline;
+  color: #007fd3;
+}
+
+@media (max-width: 500px) {
+  .main-container .tabs-header {
+      display: none;
+  }
 }

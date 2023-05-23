@@ -1,0 +1,61 @@
+.projects {
+  color: lightgray;
+  padding-right: 50px;
+}
+.project {
+  border-bottom: 3px solid #5a5858;
+  padding: 50px 0;
+}
+.projects .project-header {
+  display: flex;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.411);
+  min-height: 120px;
+  font-size: 15px;
+}
+.project-header--tags {
+  display: flex;
+  margin-bottom: 10px;
+}
+.project-header .download-icon {
+  color: lightgray;
+  font-size: 14px;
+  width: 14px;
+  height: 12px;
+}
+.project-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.video {
+  width: 80%;
+  height: 350px;
+}
+
+@media (max-width: 750px) {
+  .projects {
+    padding: 10px !important;
+  }
+  .projects .project-header {
+    min-height: 200px;
+    font-size: 14px;
+  }
+  .project-header--tags {
+    flex-direction: column;
+  }
+}
+@media (min-width: 750px) {
+  .project-header--tags div {
+    border-right: 1px solid lightgray;
+  }
+  .project-header--tags div:not(:first-child) {
+    padding: 0 10px;
+  }
+  .project-header--tags div:first-child {
+    padding-right: 10px;
+  }
+  .project-header a {
+    padding-left: 10px;
+  }
+}

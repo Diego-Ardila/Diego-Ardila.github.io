@@ -15,7 +15,7 @@
     background-color: rgba(117, 117, 117, 0.384);
     outline: 1px solid rgba(22, 22, 22, 0.342);
 }
-.main-container header {
+.main-container .tabs-header {
     color: dimgray;
     display: flex;
     position: sticky;
@@ -35,7 +35,7 @@
     background-color: rgba(46, 46, 46, 0.808);
 }
 .tab svg {
-    color: yellow;
+    color: brown;
     font-size: 16px;
     margin-right: 5px;
 }
@@ -62,4 +62,10 @@
     font-size: 14px;
     margin: 0;
     padding: 0;
+}
+
+@media (max-width: 500px) {
+    .main-container .tabs-header {
+        display: none;
+    }
 }

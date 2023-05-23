@@ -3,17 +3,17 @@ import Experience from '../components/Experience';
 import Projects from '../components/Projects';
 import Readme from '../components/Readme';
 import './MainContainer.css';
-import { FaInfoCircle, FaJsSquare } from 'react-icons/fa';
+import { FaCode, FaInfoCircle } from 'react-icons/fa';
 import { tabs } from '../utils/constants';
 
-const component = (active, ref) => {
+const component = (active, ref, setTotalRows) => {
   switch(active) {
-    case tabs.READ_ME:
-      return <Readme ref={ref} />
-    case tabs.EXPERIENCE:
-      return <Experience ref={ref} />
-    case tabs.PROJECTS:
-      return <Projects ref={ref} />
+    case tabs.READ_ME.name:
+      return <Readme ref={ref} setTotalRows={setTotalRows} />
+    case tabs.EXPERIENCE.name:
+      return <Experience ref={ref} setTotalRows={setTotalRows} />
+    case tabs.PROJECTS.name:
+      return <Projects setTotalRows={setTotalRows} />
   }
 }
 
@@ -21,19 +21,6 @@ function MainContainer({active, setActive}) {
   const [rows, setRows] = useState([]);
   const [totalRows, setTotalRows] = useState(0);
   const ref = useRef();
-
-  useEffect(() => {
-    if (!ref?.current) return;
-
-    const observer = new ResizeObserver(() => {
-      setTotalRows(Math.ceil(ref?.current?.offsetHeight/17));
-    });
-
-    observer.observe(ref.current);
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   useEffect(() => {
     setRows([]);
@@ -44,11 +31,11 @@ function MainContainer({active, setActive}) {
 
   return (
     <div className="main-container">
-      <header>
+      <header className='tabs-header'>
         {Object.values(tabs).map(tab => (
-          <div key={tab} className={`tab ${tab === active ? 'active' : ''}`} onClick={() => setActive(tab)}>
-            {tab === tabs.READ_ME ? <FaInfoCircle style={{color: 'cornflowerblue'}} /> : <FaJsSquare />}
-            {tab}
+          <div key={tab} className={`tab ${tab.name === active ? 'active' : ''}`} onClick={() => setActive(tab.name)}>
+            {tab.logo}
+            {tab.name}
           </div>
         ))}
       </header>
@@ -57,7 +44,7 @@ function MainContainer({active, setActive}) {
           <span key={row}>{row}</span>
         ))}
       </div>
-      {component(active, ref)}
+      {component(active, ref, setTotalRows)}
     </div>
   );
   }

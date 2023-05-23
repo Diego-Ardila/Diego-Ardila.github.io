@@ -1,13 +1,26 @@
-import { forwardRef } from "react";
+import { forwardRef, useEffect } from "react";
 import { dataBases, deployments, libraries, mainItems } from "../utils/constants";
 import Card from "./Card";
 
-const Readme = forwardRef(function (props, ref) {
+const Readme = forwardRef(function ({ setTotalRows }, ref) {
   const started = () => {
     const started = new Date('5/13/2020');
     const diffTime = Math.abs(new Date() - started);
     return Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365)); 
   }
+
+  useEffect(() => {
+    if (!ref?.current) return;
+
+    const observer = new ResizeObserver(() => {
+      setTotalRows(Math.ceil(ref?.current?.offsetHeight/17));
+    });
+
+    observer.observe(ref.current);
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
 
   return (
     <div className="readme" ref={ref}>

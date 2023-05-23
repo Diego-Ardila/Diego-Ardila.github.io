@@ -87,14 +87,11 @@ export const jobs = [
     where they could find all the documentation and onboarding path for all the different roles.
     Using React js, Redux with Sagas, HTML, CSS with Sass.`,
     tasks: [
-      `Worked on the Onboarding platform used by the whole employees in the company
-      where they could find all the documentation and onboarding path for all the different roles.
-      Using React js, Redux with Sagas, HTML, CSS with Sass.`,
       `Collaborating on the implementation of new
-      project features, utilizing best practices for clean
+      project features, applying best practices for clean
       code development and emphasizing unit
       testing`,
-      `Identifying and resolving minor bugs in the
+      `Identifying and resolving minor and critical bugs in the
       production environment.`,
       `Proactively suggesting and addressing technical
       debt to enhance code base maintainability.`,
@@ -111,17 +108,17 @@ export const jobs = [
     S3 buckets and cloudfronts configurations. Used Vue js, Vuex, HTML, CSS with Sass.`,
     tasks: [
       `Developing new microfrontends from the
-      ground up by leveraging existing legacy views
+      ground up based on existing legacy views
       from a .Net monolith.`,
       `Taking a leadership role within the Frontend
       team of my cell, conducting code reviews,
       providing technical guidance, and contributing
       to the planning of new features for our products.
       `,
-      `Spearheading the research and implementation
+      `Leading the research and implementation
       of unit testing for the newly built
       microfrontends`,
-      `Providing ongoing maintenance and support for
+      `Providing maintenance and support for
       features built within the legacy monolith as
       required.
       `
@@ -148,8 +145,8 @@ export const projects = [
     repo: 'https://github.com/Diego-Ardila/movies-app',
     description: `App for rendering and searching movies using the MoviesDB public api, 
     created with Vue js, HTML, CSS, Axios. Has a Login view with different validations, a Home view
-    with a paginated list of the most popular movies, you can also search a movie in the top typeahead input which 
-    will suggest you movies' names according to what you type, finally you can also 
+    with a paginated list of the most popular movies, you can also search a movie with the typeahead input, placed at the top, which 
+    will suggest you movies' names according to what you type; finally you can also 
     safe your favorite movies in your browser local storage`,
     gif: 'movies-gif.gif',
     link: 'https://movies-app-shared-box.vercel.app/'

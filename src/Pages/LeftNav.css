@@ -1,0 +1,29 @@
+.left-nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    width: 45px;
+    height: calc(100vh - 35px - 25px);
+    background-color: black;
+    border-right: 1px solid gray;
+    padding: 5px 0;
+}
+.left-nav--top ,
+.left-nav--bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 130px;
+}
+.left-nav svg {
+    font-size: 30px;
+    color: grey;
+    width: 45px;
+}
+.left-nav .active-nav {
+    border-left: 2px solid blue;
+    width: 40px;
+}

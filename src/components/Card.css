@@ -1,0 +1,28 @@
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.card {
+  list-style: none;
+  padding: 0px;
+  color: lightgray;
+  min-width: 250px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.list-title {
+  border-bottom: 1px solid gray;
+  margin-bottom: 5px;
+  padding: 7px;
+}
+.list-item {
+  display: flex;
+  margin-bottom: 5px;
+  padding: 4px;
+}
+.list-item svg {
+  height: 20px;
+  margin: 0 10px;
+}

@@ -81,7 +81,7 @@ export const deployments = [
 
 export const jobs = [
   {
-    title: 'Globant - Earnst & Young',
+    title: 'Globant - Ernst & Young',
     date: '   <!-- Feb 2022 to May 2023 -->',
     description: `Worked on the Onboarding platform used by the whole employees in the company
     where they could find all the documentation and onboarding path for all the different roles.

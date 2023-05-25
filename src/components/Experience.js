@@ -3,7 +3,6 @@ import JobDescription from "./JobDescription";
 import { jobs } from "../utils/constants";
 
 const Experience = forwardRef(function ({ setTotalRows }, ref) {
-  console.log(ref.current);
   useEffect(() => {
     if (!ref?.current) return;
 
@@ -25,10 +24,10 @@ const Experience = forwardRef(function ({ setTotalRows }, ref) {
       <span className="title">{'</h1>'}</span>
       <br />
       {jobs.map(job => (
-        <>
+        <div key={job.title}>
           <br />
           <JobDescription job={job}/>
-        </>
+        </div>
       ))}
     </div>
   );

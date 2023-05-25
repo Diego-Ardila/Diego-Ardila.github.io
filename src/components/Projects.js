@@ -11,7 +11,7 @@ function Projects({setTotalRows}) {
   return (
     <div className="projects">
       {projects.map((proyect) => (
-        <Project project={proyect}/>
+        <Project key={proyect.name} project={proyect}/>
         ))}
     </div>
   );

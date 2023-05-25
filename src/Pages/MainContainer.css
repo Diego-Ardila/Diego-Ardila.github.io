@@ -47,10 +47,11 @@
     height: 95%;
 }
 .readme,
-.experience,
-.projects {
+.experience {
     font-size: 14px;
-    padding-left: 50px;
+    padding-left: 60px;
+    padding-right: 30px;
+    max-width: 800px;
 }
 .main-left-column {
     display: flex;

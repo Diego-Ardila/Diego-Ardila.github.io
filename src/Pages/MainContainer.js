@@ -33,7 +33,7 @@ function MainContainer({active, setActive}) {
     <div className="main-container">
       <header className='tabs-header'>
         {Object.values(tabs).map(tab => (
-          <div key={tab} className={`tab ${tab.name === active ? 'active' : ''}`} onClick={() => setActive(tab.name)}>
+          <div key={tab.name} className={`tab ${tab.name === active ? 'active' : ''}`} onClick={() => setActive(tab.name)}>
             {tab.logo}
             {tab.name}
           </div>

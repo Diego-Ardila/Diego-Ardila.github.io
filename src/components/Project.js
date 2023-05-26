@@ -28,7 +28,9 @@ function Project({ project }) {
         </div>
       </header>
       <div className="project-body">
-        <p>{description}</p>
+        <br/>
+        <p className="text">{description}</p>
+        <br />
         {youtubeId ? (
           <iframe
             className='video'

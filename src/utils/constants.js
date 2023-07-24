@@ -1,5 +1,5 @@
-import { FaAlignJustify, FaCode, FaCss3Alt, FaGithub, FaHtml5, FaInfoCircle, FaJsSquare, FaParking, FaReact, FaVuejs } from "react-icons/fa";
-import { SiHackthebox, SiHeroku, SiJest, SiLivechat, SiMongodb, SiPostgresql, SiRedux, SiRender, SiTestinglibrary, SiThemighty, SiVercel } from "react-icons/si";
+import { FaCloudUploadAlt, FaAlignJustify, FaCode, FaCss3Alt, FaGithub, FaHtml5, FaInfoCircle, FaJsSquare, FaParking, FaReact, FaVuejs } from "react-icons/fa";
+import { SiSellfy, SiHackthebox, SiHeroku, SiJest, SiLivechat, SiMongodb, SiPostgresql, SiRedux, SiRender, SiTestinglibrary, SiThemighty, SiVercel } from "react-icons/si";
 
 export const tabs = {
   READ_ME: {name: 'README.md', logo: <FaInfoCircle style={{color: 'cornflowerblue'}} />},
@@ -138,6 +138,30 @@ export const projects = [
     functionalities, users notifications through the app and email.`,
     youtubeId: 'yuw81VuE6qg',
     link: 'https://shared-box.vercel.app/home'
+  },
+  {
+    name: 'Files uploader',
+    image: <FaCloudUploadAlt style={{fontSize: '100px', color: 'white'}}/>,
+    repo: 'https://github.com/Diego-Ardila/trebol-app',
+    description: `Project for uploading different files according to a client's configuration.
+    Where a Client can configure his own required files layout using an api, and an Enterprise(client of the Client)
+    can navigate to the website and according to the client's id passed by the url path, and upload the files requested.
+    Developed both Front-end and Back-end services using Typescript, React js, MUI, Formik with YUP
+    React Context with reducer implementation, Sass, Nest js, AWS S3 buckets for files data storage,
+    Postgre SQL and Typeorm.`,
+    gif: 'trebol-app.gif',
+    link: 'https://trebol-app.vercel.app/2'
+  },
+  {
+    name: 'Sales pipeline',
+    image: <SiSellfy style={{fontSize: '100px', color: 'dodgerblue'}}/>,
+    repo: 'https://github.com/Diego-Ardila/sales-pipeline',
+    description: `Project where you can simulate a CRM interaction with a sales pipeline,
+    conformed by the (Lead -> Prospect -> Negotiation -> Contract) stages, in which you can run authomatic 
+    simulated validations to check if a customer in the Lead stage is eligible to become a Prospect. 
+    Using Typescript, React js, React router v6, axios, axios-mock-adapter, react-testing-library and Jest.`,
+    gif: 'sales-pipeline-approved.gif',
+    link: 'https://sales-pipeline.vercel.app/'
   },
   {
     name: 'Movies app',
